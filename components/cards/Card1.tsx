@@ -39,7 +39,7 @@ export default function Card1() {
                 <motion.img
                   variants={OpacityVarient}
                   className="border rounded-full w-36 h-36"
-                  src="/myimage.jpeg"
+                  src="/myimage.JPEG"
                   alt=""
                 />
               </div>

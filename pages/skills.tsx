@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import Head from 'next/head';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import React, { useRef} from "react";
@@ -46,16 +47,20 @@ const skills= ()=>{
     setSnap(!snap)
   }
   const snapPlay=()=>{
-    let audio = document.querySelector('#audio')
+    let audio:any =document.querySelector('#audio')
     audio.play();
 }
-  var tID = {
+  type TID ={
+    snap:number|null
+    time:number|null
+  }
+  var tID: any = {
     snap: null,
     time: null
   }; //we will use this variable to clear the setInterval()
   
   
-  function animateScript(e) {
+  function animateScript(e:any) {
     
   //Reset every click
   clearInterval(tID[e.target.id]); //reset animation
@@ -93,6 +98,11 @@ const skills= ()=>{
 
     return(
       <>
+
+      <Head>
+        <title>APU| SKILLS</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <motion.div
       
 
@@ -117,7 +127,7 @@ const skills= ()=>{
           { !isScreenMD?(
           <motion.div
           initial={{x:0,y:-20}}
-          animate={{x:[0,500,700,760],y:[-20,-20,-20,0]}}
+          animate={{x:['0%','10%','20%','44%'],y:[-20,-20,-20,0]}}
           transition={{
             times:[0,.3,.8,1],
             duration:5,
@@ -148,13 +158,12 @@ const skills= ()=>{
             delay:7
           }}
           ></motion.hr>
-          <audio id="audio" src="https://www.google.com/logos/fnbx/thanos/thanos_snap_sound.mp3" type='audio/mpeg' ></audio>
+          <audio id="audio" src="https://www.google.com/logos/fnbx/thanos/thanos_snap_sound.mp3"  ></audio>
           
             
           <motion.div 
             className="mt-4"><button className='mx-10 text-white font-black shadow-2xl px-2 p-2 mb-2 bg-blue-500 rounded-md hover:scale-125 transition-all' onClick={()=>{setButtonSnap(!buttonSnap)}}>Snap?</button></motion.div>
             <motion.div 
-            cx = {500}
             animate={{x:[null,100,0]}}
             transition={{duration:3,times:[0,.2,1] ,repeat:Infinity}}
             className="bg-blue-500 p-4 w-1 mx-10 my-5"></motion.div>

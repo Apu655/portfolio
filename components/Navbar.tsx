@@ -4,8 +4,11 @@ import {motion} from 'framer-motion'
 import {FaFacebookF,FaGithub,FaLinkedinIn} from "react-icons/fa";
 import {BsFillSuitDiamondFill} from 'react-icons/bs';
 
-
-const Navbar = (props) => {
+type Props ={
+    snap:boolean
+    stoneBar:boolean
+}
+const Navbar = (props:Props) => {
 
     const snapVariant={
         'initSnap':{
@@ -27,10 +30,6 @@ const Navbar = (props) => {
         }
       }
 
-    const audioPlay=()=>{
-        let audio = document.querySelector('#audio')
-        audio.play();
-    }
     let [open,setOpen]= useState(false);
     const menuVariants = {
         closed:{
@@ -76,7 +75,6 @@ const Navbar = (props) => {
     return ( 
         
             <nav className=" w-full lg:bg-white font-serif">
-                <audio id="audio" src="https://www.google.com/logos/fnbx/thanos/thanos_snap_sound.mp3" type='audio/mpeg' ></audio>
                 <div className=" py-2 shadow-lg px-10 mx-auto font-bold text-black lg:block hidden">
                     <div className="flex ">
                     <ul className="flex space-x-3">

@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const FlipVarient = {
+const FlipVarient:any = {
   before: { rotateY: -180,transition:0.3 },
   after: { rotateY: 0,transition:0.3 }
 };
 
-const OpacityVarient = {
+const OpacityVarient:any = {
   initial: { opacity: 0, transition: 0.8 },
   animate: { opacity: 1, transition: 0.8 },
 };

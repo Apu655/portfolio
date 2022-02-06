@@ -29,10 +29,10 @@ export default function Home() {
     <div 
     className="">
       <Head>
-        <title>Create Next App</title>
+        <title>APU</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar stoneBar={false}></Navbar>
+      <Navbar stoneBar={false} snap={false}></Navbar>
       <motion.main 
       exit={{
         scaleY:0

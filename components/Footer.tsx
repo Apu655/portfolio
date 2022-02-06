@@ -1,5 +1,3 @@
-import BotMenu from "./BotMenu";
-
 const Footer = () => {
     return ( 
     <>

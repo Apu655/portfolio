@@ -10,7 +10,7 @@ const OpacityVarient:any = {
   initial: { opacity: 0, transition: 0.8 },
   animate: { opacity: 1, transition: 0.8 },
 };
-export default function Card1() {
+export default function Card3() {
   const [flip, setFlip] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ export default function Card1() {
         animate={flip ? "before" : "after"}
         variants={FlipVarient}
         transition={{ duration: 0.4 }}
-        className="select-none hover:cursor-pointer w-[305px] h-[420px] bg-gradient-to-br from-gray-100 to-gray-400 rounded-l-xl rounded-r-xl shadow-xl border py-2 px-5 items-center absolute "
+        className="select-none hover:cursor-pointer w-[305px] h-[420px] bg-gradient-to-br from-gray-100 to-transparent rounded-l-xl rounded-r-xl shadow-xl border py-2 px-5 items-center absolute "
       />
       <motion.div
         initial="initial"

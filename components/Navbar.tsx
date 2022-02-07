@@ -75,8 +75,8 @@ const Navbar = (props:Props) => {
 
     return ( 
         
-            <nav className=" w-full lg:bg-white font-serif">
-                <div className=" py-2 shadow-lg px-10 mx-auto font-bold text-black lg:block hidden">
+            <nav className=" w-full font-serif">
+                <div className=" py-2 shadow-lg px-10 mx-auto font-bold text-white lg:block hidden">
                     <div className="flex ">
                     <ul className="flex space-x-3">
                         <motion.li 
@@ -98,7 +98,7 @@ const Navbar = (props:Props) => {
                             duration:0.2
                         }}
                         >
-                            <li className="hover:text-black hover:bg-teal-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2">HOME</li>
+                            <li className="hover:text-black hover:bg-sky-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2">HOME</li>
                             </motion.a>
                             </Link>
 
@@ -110,7 +110,7 @@ const Navbar = (props:Props) => {
                         transition={{
                             duration:0.3
                         }}
-                        className="hover:text-black hover:bg-teal-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>SKILLS</li></motion.a></Link>
+                        className="hover:text-black hover:bg-sky-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>SKILLS</li></motion.a></Link>
                         
                         <Link href="#">
                             <motion.a 
@@ -120,7 +120,7 @@ const Navbar = (props:Props) => {
                         transition={{
                             duration:0.4
                         }}
-                        href="#" className="hover:text-black hover:bg-teal-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>PROJECTS</li></motion.a></Link>
+                        href="#" className="hover:text-black hover:bg-sky-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>PROJECTS</li></motion.a></Link>
                         <Link href="/#">
                             <motion.a 
                             href="#"
@@ -130,7 +130,7 @@ const Navbar = (props:Props) => {
                         transition={{
                             duration:0.5
                         }}
-                        className="hover:text-black hover:bg-teal-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>ABOUT</li></motion.a></Link>
+                        className="hover:text-black hover:bg-sky-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>ABOUT</li></motion.a></Link>
                     </ul>
                     {props.stoneBar?
                     (

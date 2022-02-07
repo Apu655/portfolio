@@ -32,15 +32,13 @@ export default function Home() {
         <title>APU</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar stoneBar={false} snap={false}></Navbar>
+      
+
       <motion.main 
-      exit={{
-        scaleY:0
-      }}
-      transition={{
-        duration:2
-      }}
-      className="flexflex-col h-screen justify-between bg-slate-800 text-white font-serif">
+      
+      
+      className={`flexflex-col h-screen justify-between bg-slate-900 ${nameClick?'bg-opacity-90':'bg-opacity-100'} transition-all duration-500 ease-in text-white font-serif`}>
+        <Navbar stoneBar={false} snap={false}></Navbar>
       
       <motion.div
       exit={{
@@ -51,7 +49,7 @@ export default function Home() {
         <div className="pt-20 px-32 text-3xl font-black">
           <motion.h1>Welcome</motion.h1>
           <h1>I AM</h1>
-          <motion.button onClick={()=>{setNameClick(!nameClick)}} className=" font-black shadow-2xl px-2 border p-2 mb-2 bg-blue-500 rounded-md"
+          <motion.button onClick={()=>{setNameClick(!nameClick)}} className=" font-black shadow-2xl px-2 border p-2 mb-2 bg-blue-600 rounded-md"
           whileHover={{
             scale:1.2
           }}

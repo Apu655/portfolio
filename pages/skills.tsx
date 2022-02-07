@@ -103,21 +103,13 @@ const skills= ()=>{
         <title>APU| SKILLS</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.div
       
-
-      drag
-      >
-      <Navbar stoneBar={true} snap={snap}></Navbar>
-      </motion.div>
       
       <motion.div className="pt-2 bg-slate-900 min-h-screen overflow-hidden font-serif"
-      initial={{scaleY:0}}
-      animate={{scaleY:1}}
-      transition={{
-        duration:2,
-      }}
       >
+        <motion.div>
+      <Navbar stoneBar={true} snap={snap}></Navbar>
+      </motion.div>
         <motion.div
         variants={snapVariant}
         initial={snap?'initTime':'initSnap'}
@@ -163,7 +155,7 @@ const skills= ()=>{
             
           <motion.div 
             className="mt-4"><button className='mx-10 text-white font-black shadow-2xl px-2 p-2 mb-2 bg-blue-500 rounded-md hover:scale-125 transition-all' onClick={()=>{setButtonSnap(!buttonSnap)}}>Snap?</button></motion.div>
-            <motion.div 
+            {/* <motion.div 
             animate={{x:[null,100,0]}}
             transition={{duration:3,times:[0,.2,1] ,repeat:Infinity}}
             className="bg-blue-500 p-4 w-1 mx-10 my-5"></motion.div>
@@ -179,12 +171,12 @@ const skills= ()=>{
                  duration:5,
                  repeat:Infinity
                }}
-            className="bg-slate-500 p-4 w-1 mx-10 my-5"></motion.div>
+            className="bg-slate-500 p-4 w-1 mx-10 my-5"></motion.div> */}
 
             
         </motion.div>
         <motion.div 
-        initial={{y:buttonSnap?-1000:0}}
+        initial={{y:-1000}}
         animate={{y:buttonSnap?0:-1000}}
         transition={{duration:0.8}}
         className={` ${isSpace?'bg-space':snap?'bg-snap':'bg-time'} h-20 w-20 hover:cursor-pointer mx-40 relative`} onClick={()=>{animateScript(event);snapClicker();}}>

@@ -22,7 +22,7 @@ export default function Card1() {
         animate={flip ? "before" : "after"}
         variants={FlipVarient}
         transition={{ duration: 0.4 }}
-        className="select-none hover:cursor-pointer w-[305px] h-[420px] bg-gradient-to-br from-gray-100 to-gray-400 rounded-l-xl rounded-r-xl shadow-xl border py-2 px-5 items-center absolute "
+        className="select-none hover:cursor-pointer w-[305px] h-[420px] bg-gradient-to-br from-gray-100 to-transparent rounded-l-xl rounded-r-xl shadow-xl border py-2 px-5 items-center absolute "
       />
       <motion.div
         initial="initial"
@@ -49,7 +49,7 @@ export default function Card1() {
             </div>
             <motion.div className="mt-5 mx-5" variants={OpacityVarient}>
               <motion.p className="text-md">
-                I am Apu Islam, I am currently pursuing my bachelor degree at Computer Science & Engineering. I love web developing and learning new things fascinates me. 
+                I am Apu Islam, I am currently pursuing my bachelor degree at Computer Science & Engineering. I love web developing and learning new things fascinates. 
               </motion.p>
             </motion.div>
           </div>

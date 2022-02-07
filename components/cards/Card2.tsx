@@ -48,7 +48,7 @@ export default function Card1() {
             <motion.div className="mt-5 mx-5" variants={OpacityVarient}>
               <motion.p className="text-md">
                 I am currently pursuing Computer Science and Engineering deree
-                at BRAC University. I have completed 72 credits so far.
+                at BRAC University. Hopefully by 2024, I will be graduated.
               </motion.p>
             </motion.div>
           </div>

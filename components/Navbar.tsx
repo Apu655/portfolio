@@ -3,6 +3,7 @@ import { useState } from 'react'
 import {motion} from 'framer-motion'
 import {FaFacebookF,FaGithub,FaLinkedinIn} from "react-icons/fa";
 import {BsFillSuitDiamondFill} from 'react-icons/bs';
+import { reverse } from 'dns';
 
 type Props ={
     snap:boolean
@@ -78,7 +79,12 @@ const Navbar = (props:Props) => {
                 <div className=" py-2 shadow-lg px-10 mx-auto font-bold text-black lg:block hidden">
                     <div className="flex ">
                     <ul className="flex space-x-3">
-                        <li className="px-4 py-2"><a href="#">Logo</a></li>
+                        <motion.li 
+                        initial={{rotateY:0, scale:1}}
+                        animate={{rotateY:[180,360], scale:1}}
+                        transition={{duration:2, repeat:Infinity, repeatType:'reverse'}}
+                        className="px-4 py-2"><Link href='/'>
+                            <a href="#"><img src='A.png' className='border rounded-full h-7 w-7'></img></a></Link></motion.li>
                     </ul>
                     <ul className="flex flex-row space-x-3 px-7 ">
                         <Link href='/'>
@@ -106,7 +112,7 @@ const Navbar = (props:Props) => {
                         }}
                         className="hover:text-black hover:bg-teal-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>SKILLS</li></motion.a></Link>
                         
-                        <Link href="/project">
+                        <Link href="#">
                             <motion.a 
                         variants={navVariant}
                         initial='animeInitial'
@@ -115,7 +121,7 @@ const Navbar = (props:Props) => {
                             duration:0.4
                         }}
                         href="#" className="hover:text-black hover:bg-teal-400 hover:rounded-3xl transition-all duration-50 ease-linear p-2"><li>PROJECTS</li></motion.a></Link>
-                        <Link href="/about">
+                        <Link href="/#">
                             <motion.a 
                             href="#"
                             variants={navVariant}
@@ -167,9 +173,13 @@ const Navbar = (props:Props) => {
                 <div className="font-bold text-black lg:hidden">
                     <div className="flex flex-col">
                         <div className=" py-2 shadow-lg z-40 px-4 flex flex-row justify-between bg-white">
-                            <div className="p-2">
-                                <Link href="/"><a href='/' className="">Logo</a></Link>
-                            </div>
+                            <motion.div
+                            initial={{rotateY:0, scale:1}}
+                            animate={{rotateY:[180,360], scale:1}}
+                            transition={{duration:2, repeat:Infinity, repeatType:'reverse', repeatDelay:.5}}
+                            className="p-2">
+                                <Link href="/"><a href='/' className=""><img src='A.png' className='border rounded-full h-7 w-7'></img></a></Link>
+                            </motion.div>
                             <div>
                             <button className="p-2 z-20" onClick={clickHandler}>
                                 <motion.svg xmlns="http://www.w3.org/2000/svg" 

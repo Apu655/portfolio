@@ -49,8 +49,7 @@ export default function Card1() {
             </div>
             <motion.div className="mt-5 mx-5" variants={OpacityVarient}>
               <motion.p className="text-md">
-                I am currently pursuing Computer Science and Engineering degree
-                at BRAC University. I love web-developing and exchanging ideas and experience with people.
+                I am Apu Islam, I am currently pursuing my bachelor degree at Computer Science & Engineering. I love web developing and learning new things fascinates me. 
               </motion.p>
             </motion.div>
           </div>
